@@ -11,12 +11,13 @@ package Lat_Long with SPARK_Mode is
    Conv_Deg_To_Rad : constant Float_With_Approx := Pi / 180.0;
 
    function Cos(X : Float_With_Approx) return Float_With_Approx
-   is (Float_With_Approx(Cos(Float(X))));
+   is (Float_With_Approx(Sin(Float(X)))) with
+   Post => (if X in -75.0 .. 75.0 then Cos'Result >= 0.1);
 
    function Sqrt(X : Float_With_Approx) return Float_With_Approx
    is (Float_With_Approx(Sqrt(Float(X))));
 
-   subtype Latitude is Float_With_Approx range - 90.0 .. 90.0;
+   subtype Latitude is Float_With_Approx range - 75.0 .. 75.0;
    subtype Longitude is Float_With_Approx range Float_With_Approx'Succ(- 180.0) .. 180.0;
 
    type Coordinates is record
@@ -25,7 +26,6 @@ package Lat_Long with SPARK_Mode is
    end record;
 
    function Distance(Source, Destination : Coordinates) return Float_With_Approx with
-     Pre => Cos(Source.Lat) /= 0.0,
      Post => Distance'Result = Sqrt(
                Delta_Lat_In_Meters(Source, Destination) *  Delta_Lat_In_Meters(Source, Destination) +
                Delta_Long_In_Meters(Source, Destination) * Delta_Long_In_Meters(Source, Destination));

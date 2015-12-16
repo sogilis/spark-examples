@@ -1,14 +1,22 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file />
+    <vfs_file>/home/valentin/Soft/Adacore/SPARK_training/exercises/spark-examples/latlong-example/latlong.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/alex/work/pulsar/spark-examples/latlong-example/latlong.gpr</vfs_project>
-      <vfs_file>/home/alex/work/pulsar/spark-examples/latlong-example/latlong.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>/home/valentin/Soft/Adacore/SPARK_training/exercises/spark-examples/latlong-example/lat_long.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/valentin/Soft/Adacore/SPARK_training/exercises/spark-examples/latlong-example/lat_long.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/valentin/Soft/Adacore/SPARK_training/exercises/spark-examples/latlong-example/latlong.gpr</vfs_file>
     </file_marker>
     <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>/home/alex/work/pulsar/spark-examples/latlong-example/latlong.gpr</vfs_project>
-      <vfs_file>/home/alex/work/pulsar/spark-examples/latlong-example/latlong.adb</vfs_file>
+      <vfs_project />
+      <vfs_file>/home/valentin/Soft/Adacore/SPARK_training/exercises/spark-examples/latlong-example/latlong-loc.xml</vfs_file>
     </file_marker>
   </Project>
 </Locations>

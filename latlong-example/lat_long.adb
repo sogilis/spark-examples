@@ -7,7 +7,7 @@ package body Lat_Long with SPARK_Mode is
    begin
       Delta_Lat := (Destination.Lat - Source.Lat) * R * Conv_Deg_To_Rad;
       Delta_Long := (Destination.Long - Source.Long) * R / Cos(Source.Lat);
-      return Sqrt(Delta_Lat ** 2 + Delta_Long ** 2);
+      return Sqrt(Delta_Lat * Delta_Lat + Delta_Long * Delta_Long);
    end Distance;
 
 end Lat_Long;
