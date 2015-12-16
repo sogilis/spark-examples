@@ -1,0 +1,5 @@
+*.cgpr
+*.ali
+*.o
+*.db
+gnatprove
